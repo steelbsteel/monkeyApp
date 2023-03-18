@@ -8,6 +8,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.3.15'
     }
 }
 
@@ -28,4 +29,13 @@ subprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+defaultConfig {
+    applicationId "my.package.name"
+    minSdkVersion 16
+    targetSdkVersion 27
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 }
